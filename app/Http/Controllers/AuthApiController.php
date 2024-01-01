@@ -46,6 +46,7 @@ class AuthApiController extends Controller
         {
             $auth = Auth::user();
             $success['token'] = $auth->createToken('auth_token')->plainTextToken;
+            $success['id'] = $auth->id;
             $success['name'] = $auth->name;
             $success['email'] = $auth->email;
 
